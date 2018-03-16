@@ -6,10 +6,10 @@ public class Constants {
 
     protected static final int WIDTH = 10;
     protected static final int HIGHT = 10;
-    protected static int MAX_BOMBS = 5;
+    protected static int MAX_BOMBS = 10;
     protected static final int SIZE_BLOCK = 30;
     protected static Coord size;
-    protected static String TITLE = "Sapper v.0.2";
+    protected static String TITLE = "Sapper v.1.0";
     protected static Color[] COLOR_BOMBS = {Color.BLACK,
                                             Color.GREEN,
                                             Color.RED,

@@ -24,12 +24,12 @@ public class GameLogic {
                 openArroundBlocks(coord);
             }
             MatrixField.setFieldMatrix(coord,0);
-            chekGameOver(coord);
-            checkGameWin();
         }
         if (MatrixField.getFieldMatrix(coord) == 0 && MatrixField.getOpenedField(coord) > 0 && checkAroundNumber(coord)) {
             openArroundBlocks(coord);
         }
+        chekGameOver(coord);
+        checkGameWin();
     }
 
     protected static void clickCenterButton(Coord coord) {
@@ -89,6 +89,7 @@ public class GameLogic {
                             continue;
                         }
                         MatrixField.setFieldMatrix(new Coord(xx, yy), 0);
+                        chekGameOver(new Coord(xx, yy));
                         if (MatrixField.getOpenedField(new Coord(xx, yy)) == 0 && MatrixBomb.getBombMatrix(new Coord(xx, yy)) == 0) {
                             openArroundBlocks(new Coord(xx, yy));
                         }

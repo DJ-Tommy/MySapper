@@ -2,7 +2,7 @@ package sapper;
 
 public class MatrixField {
     private static int[][] closedFieldMatrix; // статус 0 - открыто, 1 - закрыто, 2 - флаг бомбы,
-    private static int[][] openedFieldMatrix;
+    private static int[][] openedFieldMatrix; // статус 0 - нет цифры, 1-8 количество бомб вокруг
 
     protected MatrixField() {
         closedFieldMatrix = new int[Constants.size.x][Constants.size.y];

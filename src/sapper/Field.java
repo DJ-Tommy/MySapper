@@ -22,7 +22,7 @@ public class Field extends JFrame{
 
     private void changeLabel() {
         if (!GameLogic.ifGameOver()) {
-            label.setText("Осталось найти мин: " + Constants.getCountOfBombs() + "  Осталось открыть полей: " + (Constants.getVolumeBoxOnField() - Constants.getOpenBoxOnTheField() - Constants.MAX_BOMBS));
+            label.setText("Осталось найти мин: " + Constants.getCountOfBombs() + "  Осталось открыть: " + (Constants.getVolumeBoxOnField() - Constants.getOpenBoxOnTheField() - Constants.MAX_BOMBS));
         }
         if (GameLogic.ifGameOver()) {
             label.setText("Game Over");
