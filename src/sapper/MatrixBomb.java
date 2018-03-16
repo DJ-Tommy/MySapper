@@ -20,7 +20,7 @@ public class MatrixBomb {
             while (check) {
                 int x = (int) (Math.random() * Constants.size.x);
                 int y = (int) (Math.random() * Constants.size.y);
-                int color = (int) (Math.random() * Constants.COLOR_BOMBS.length);
+                int color = (int)(Math.random() * (Constants.COLOR_BOMBS.length - 1)) + 1;
                 if (bombMatrix[x][y] == 0) {
                     bombMatrix[x][y] = color;
                     check = false;

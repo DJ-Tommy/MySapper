@@ -17,7 +17,6 @@ public class MatrixField {
             }
         }
         setEmptyFieldMatrix();
-        testOpenBoxOnField();
     }
 
     protected static int getFieldMatrix(Coord coord) {
@@ -54,21 +53,6 @@ public class MatrixField {
 
     protected static int getOpenedField(Coord coord) {
         return openedFieldMatrix[coord.x][coord.y];
-    }
-
-    private static void testOpenBoxOnField() {
-        for (int i = 0; i < Constants.MAX_BOMBS; i++) {
-            boolean check = true;
-            while (check) {
-                int x = (int) (Math.random() * Constants.size.x);
-                int y = (int) (Math.random() * Constants.size.y);
-                int color = (int) (Math.random() * Constants.COLOR_BOMBS.length);
-                if (closedFieldMatrix[x][y] != 0) {
-                    closedFieldMatrix[x][y] = 0;
-                    check = false;
-                }
-            }
-        }
     }
 
     private static void testFlagBoxOnField() {
